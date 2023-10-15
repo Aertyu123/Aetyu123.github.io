@@ -21,12 +21,14 @@ body {
 	background: $white;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
+  padding: 90px 0 0;  // padding-top equal to masthead height or greater
+
 }
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
+  max-width: 1920px;
+  // padding: 0 10px;
   width: 100%;
 }
 
@@ -36,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 
   line-height: 1.7;
-  margin: 1em 0 15px;
+  margin: 15px 0 15px;
   padding: 0;
 
   @include mobile {
@@ -65,7 +67,7 @@ h4 {
 }
 
 p {
-  margin: 15px 0;
+  margin: 0 0;
 }
 
 a {
@@ -118,6 +120,12 @@ img {
 .date {
   font-style: italic;
   color: $gray;
+  font-size: 14px;
+  text-align: right; 
+  padding: 0 200px;
+  @include mobile{
+    padding: 0 20px;
+  }
 }
 
 // Specify the color of the selection
@@ -151,28 +159,39 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+  marigin-right: 10px;
 }
 
 .masthead {
-  padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  padding: 10px 20px;
+  // border-bottom: 1px solid $lightGray;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;  // set a color to hide content that may appear below masthead
+  height: 90px; // need a magic number here which may break in different viewports
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 
   @include mobile {
+    display: inline-block;
     text-align: center;
+    height: 120px; // need a magic number here which may break in different viewports
   }
 }
 
+
 .site-avatar {
   float: left;
-  width: 70px;
+  width: 255px;
   height: 70px;
   margin-right: 15px;
 
   @include mobile {
     float: none;
-    display: block;
-    margin: 0 auto;
+    display: inline-block;
+    margin: 0 0;
   }
 
   img {
@@ -196,7 +215,7 @@ img {
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
-  font-size: 28px;
+  font-size: 42px;
   letter-spacing: 1px;
 }
 
@@ -212,6 +231,7 @@ img {
 
 nav {
   float: right;
+  margin-right: 20px;
   margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
   font-size: 18px;
@@ -219,7 +239,7 @@ nav {
   @include mobile {
     float: none;
     margin-top: 9px;
-    display: block;
+    display: inline-block;
     font-size: 16px;
   }
 
@@ -241,9 +261,30 @@ nav {
 // .main
 //
 
+.secttitle{
+  margin: 10px 12%;
+  padding: 0 30px;
+  @include mobile {
+    margin: 10px 5%;
+	  text-align: center;
+  } 
+}
+
+.entry{
+  padding: 50px 130px;
+  @include mobile {
+    padding: 20px 40px;
+  } 
+}
+
 .posts > .post {
+  margin: 50px 150px;
+  padding: 0 30px;
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
+  @include mobile {
+    margin: 20px 0;
+  } 
 }
 
 .posts > .post:last-child {
@@ -271,6 +312,168 @@ nav {
   }
 }
 
+.mposts > .mpost {
+
+  margin: 0 12%;
+
+  padding: 0 30px;
+
+  padding-bottom: 2em;
+
+  #border-bottom: 1px solid $lightGray;
+	display:flex;
+	align-items:center;
+	
+
+  @include mobile {
+
+    margin: 0 5%;
+	  display:inline;
+
+	align-items:normal;
+
+  } 
+
+}
+
+.mposts > .mpost:last-child {
+
+  padding-bottom: 1em;
+
+  border-bottom: none;
+
+}
+
+.mpost {
+
+  blockquote {
+
+    margin: 1.8em .8em;
+
+    border-left: 2px solid $gray;
+
+    padding: 0.1em 1em;
+
+    color: $gray;
+
+    font-size: 22px;
+
+    font-style: italic;
+
+  }
+
+  .comments {
+
+    margin-top: 10px;
+
+  }
+
+  .read-more {
+
+    text-transform: uppercase;
+
+    font-size: 15px;
+
+  }
+
+}
+
+.mthumb {
+
+
+	float:left; 
+	width:200px; 
+	height:150px; 
+	
+	
+	
+	
+	display:inline-block;
+	object-fit: cover;
+	
+	
+	
+	
+@include mobile {
+      display: none !important; 
+
+    }	
+
+	
+
+	
+
+	
+	
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+}
+
+
+.mpost-sub {
+
+  margin-left: 25px;
+
+  @include mobile {
+
+    margin: 20px 0;
+	  text-align: center;
+	
+	
+
+  }
+
+}
+
+
+
+.pubs > .pub {
+  margin: 50px 100px;
+  padding: 0 30px;
+  padding-bottom: 2em;
+  border-bottom: 1px solid $lightGray;
+  @include mobile {
+    margin: 20px 0;
+  } 
+}
+
+.pubs > .pub:last-child {
+  padding-bottom: 1em;
+  border-bottom: none;
+}
+
+.pub {
+  blockquote {
+    margin: 1.8em .8em;
+    border-left: 2px solid $gray;
+    padding: 0.1em 1em;
+    color: $gray;
+    font-size: 22px;
+    font-style: italic;
+  }
+
+  .comments {
+    margin-top: 10px;
+  }
+
+  .read-more {
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+}
+
+
 .wrapper-footer {
   margin-top: 50px;
   border-top: 1px solid #ddd;
@@ -282,6 +485,358 @@ footer {
   padding: 20px 0;
   text-align: center;
 }
+
+
+// Responsive hamburger from https://codepen.io/mutedblues/pen/MmPNPG
+
+
+/* header */
+
+.header {
+  padding: 10px 20px;
+  background: #fff;
+  top: 0;
+  // box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  height: 90px; // need a magic number here which may break in different viewports
+  // backdrop-filter: blur(5px);
+  // -webkit-backdrop-filter: blur(5px);
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 5px 20px;
+  // border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+// homepage img
+
+.bio-research-hero {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    @include mobile {
+    height: 600px;
+  } 
+}
+
+.herobanner {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-color:#080D2D;
+    background-position: center;
+    @include mobile {
+    height: 250px;
+  } 
+}
+
+.heroresearchbanner {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-color:#080D2D;
+    background-position: center;
+    @include mobile {
+    background-size: auto 100%;
+    height: 140px;
+  } 
+}
+
+.flex-center {
+    justify-content: center;
+}
+.flex-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+
+.research-hero-gradient {
+    // padding: 90px 0 0;
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: rgba(16,53,81,.8);
+
+    @include mobile {
+    height: 100%;
+  }
+}
+
+
+.research-img-wrapper {
+    // padding: 90px 0 0;
+    // width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include mobile {
+    height: 100%;
+  }
+}
+
+.research-hero-page-title{
+  font-size: 35px; 
+  font-family: $helveticaNeue;
+  color: #fff;
+  font-weight: 1000;
+
+  line-height: 1.7;
+  margin: 15px 0 15px;
+  padding: 40px 180px;
+  top: 0;
+  position: absolute;
+
+  text-align:center;
+
+  @include mobile {
+    line-height: 1.4;
+    padding: 10px 20px; 
+    font-size: 30px; 
+  }
+}
+
+.research-hero-page-content{
+  font-size: 25px;
+  font-family: $helvetica;
+  color: #fff;
+  font-weight: 100;
+
+  line-height: 1.7;
+  margin: 15px 0 15px;
+  padding: 20px 0;
+
+  @include mobile {
+    line-height: 1.4;
+    font-size: 20px; 
+  }
+}
+
+.middle {
+  position: relative;
+  z-index: 1;
+
+  &:before {
+      content: '';
+      width: 32px;
+      height: 100%;
+      position: absolute;
+      left: -24px;
+      top: 0;
+      display: block;
+      z-index: -1;
+      box-shadow: 32px 0 0 0 #fff, 0 -32px 0 0 #fff, 0 32px 0 0 #fff, 32px 32px 0 0 #fff, 32px -32px 0 0 #fff, 0 0 32px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  &:after {
+      content: '';
+      width: 32px;
+      height: 100%;
+      position: absolute;
+      right: -24px;
+      top: 0;
+      display: block;
+      z-index: -1;
+      box-shadow: -32px 0 0 0 #fff, 0 -32px 0 0 #fff, 0 32px 0 0 #fff, -32px 32px 0 0 #fff, -32px -32px 0 0 #fff, 0 0 32px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+.profilegrid {
+  display: inline-block;
+  text-align: center;
+  width: 250px;
+  height: 400px;
+  margin-left: 0em;
+  margin-right: 0em;
+
+  @include mobile {
+    float: none;
+    display: inline-block;
+    margin: 0 0;
+    align-items: center;
+  }
+
+}
+
+.grid-flow {
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap:1em;
+    margin: 6em 6em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr auto;
+
+    @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto 1fr auto;
+    display: grid;
+    margin: 5em 1em;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+.alumni-block {
+  display: inline-block;
+  text-align: left;
+  width: 300px;
+  height: 300px;
+  margin-left: 115px;
+  margin-right: 15px;
+
+  @include mobile {
+    float: none;
+    display: inline-block;
+    margin: 0 0;
+  }
+
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
