@@ -1,10 +1,16 @@
 ---
 layout: post
-title: You're up and running!
+title: The HamidLab webpage is now live!
+image: live.jpg
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+We are excited to announce the official launch of our lab website! 
+<br><br>
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
-
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+This website will serve as a central hub for all information about our lab, including our research, publications, and events. We hope that this website will be a valuable resource for our colleagues, collaborators, and the public.
+<br><br>
+Our lab is located at King's College London, Guy's campus and we are a group of researchers who are passionate about developing computational biology tools to study post-transcriptional gene regulation in neuron development. Our research interests include brain development, post-transcriptional gene regulation, alternative pre-mRNA splicing, single-cell transcriptomics, software development and multimodal analyses. We also form part of our Centre's Bioinformatics Core team aimed at bridging the gap between computational and experimental biology by providing high quality bioinformatics services. 
+<br><br>
+We are committed to open science and we believe that sharing our research is essential to advancing our field. Our website will feature blogposts where we will share updates on our research, as well as a repository where we will make our code and data available to the public. We hope that this website will help to foster collaboration and accelerate the pace of scientific discovery.
+<br><br>
+Check back our website to learn more about our lab and our research! 
