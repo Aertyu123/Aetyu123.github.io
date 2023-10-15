@@ -3,13 +3,13 @@
 #
 
 # Name of your site (displayed in the header)
-name: Williams lab
+name: Hamid Lab
 
 # Short bio or description (displayed in the header)
-description: Arbor growth and lineage development in Drosophila
+description: 
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+avatar: https://raw.githubusercontent.com/f-hamidlab/f-hamidlab.github.io/master/images/HLab_logo_w_name.png
 
 #
 # Flags below are optional
@@ -18,15 +18,15 @@ avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/je
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: darren.williams@kcl.ac.uk
+  email: fursham.hamid@kcl.ac.uk
   facebook:
   flickr:
-  github: barryclark/jekyll-now
+  github: f-hamidlab
   instagram:
-  linkedin:
+  linkedin: fursham-hamid
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: jekyllrb
+  twitter: furshamh
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
@@ -37,11 +37,11 @@ footer-links:
 disqus:
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+google_analytics: G-MV25CY8FXR
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url:
+url: http://www.f-hamidlab.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
@@ -76,6 +76,7 @@ sass:
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-seo-tag
 
 # Exclude these files from your production _site
 exclude:
@@ -84,6 +85,9 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+include:
+  ['factR2']
 
 collections:
   pubs:
