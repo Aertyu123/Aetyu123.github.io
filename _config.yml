@@ -84,3 +84,13 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+collections:
+  pubs:
+    output: true
+  team:
+    people: true
+  alumni:
+    people: true
+  tools:
+    output: true
